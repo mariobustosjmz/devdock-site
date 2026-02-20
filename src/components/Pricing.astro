@@ -1,6 +1,5 @@
 ---
-const STRIPE_URL = 'https://buy.stripe.com/PLACEHOLDER';
-const RELEASES_URL = 'https://github.com/mariobustosjmz/claudeDock/releases/latest';
+import { STRIPE_URL, RELEASES_URL } from '../lib/constants';
 
 const freeTier = ['Smart Screenshot','Prompt Optimizer','Custom Action Buttons','Agent Monitor','Prompt History','Educational Shorts'];
 const proTier = ['Everything in Free','Voice Input','Workspace Snapshots','Preview CSS editing','Priority support'];
@@ -13,7 +12,7 @@ const proTier = ['Everything in Free','Voice Input','Workspace Snapshots','Previ
       <p class="text-white/50 text-lg">Start free. Upgrade when you need more.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-      <div class="glass p-8 flex flex-col" style="border-radius:1rem">
+      <div class="glass p-8 flex flex-col">
         <div class="mb-6">
           <p class="text-sm text-white/40 uppercase tracking-wider font-medium mb-1">Free</p>
           <p class="text-4xl font-bold">$0</p>
@@ -22,7 +21,7 @@ const proTier = ['Everything in Free','Voice Input','Workspace Snapshots','Previ
         <ul class="flex flex-col gap-2.5 mb-8 flex-1">
           {freeTier.map((f) => (
             <li class="flex items-center gap-2.5 text-sm text-white/70">
-              <svg class="w-4 h-4 text-violet-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg aria-hidden="true" class="w-4 h-4 text-violet-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
               {f}
             </li>
           ))}
@@ -43,7 +42,7 @@ const proTier = ['Everything in Free','Voice Input','Workspace Snapshots','Previ
         <ul class="flex flex-col gap-2.5 mb-8 flex-1">
           {proTier.map((f) => (
             <li class="flex items-center gap-2.5 text-sm text-white/80">
-              <svg class="w-4 h-4 text-violet-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg aria-hidden="true" class="w-4 h-4 text-violet-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
               {f}
             </li>
           ))}
