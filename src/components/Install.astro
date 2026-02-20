@@ -1,0 +1,37 @@
+---
+const RELEASES_URL = 'https://github.com/mariobustosjmz/claudeDock/releases/latest';
+const steps = [
+  { n: '1', title: 'Download the .dmg', body: 'Click the button below to get the latest beta from GitHub Releases.' },
+  { n: '2', title: 'Open & drag to Applications', body: 'Double-click the .dmg, then drag the DevDock icon to your Applications folder.' },
+  { n: '3', title: 'Launch — dock appears', body: 'Open DevDock from Applications or Spotlight. The dock floats above all your windows.' },
+];
+---
+
+<section id="install" class="py-24 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Up in 60 seconds</h2>
+      <p class="text-white/50 text-lg">No configuration. No account required to start.</p>
+    </div>
+    <div class="flex flex-col gap-6 mb-12">
+      {steps.map((s) => (
+        <div class="glass p-6 flex items-start gap-5" style="border-radius:1rem">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-violet-600/20 border border-violet-500/30 flex items-center justify-center text-violet-300 font-bold text-sm">
+            {s.n}
+          </div>
+          <div>
+            <h3 class="font-semibold text-white mb-1">{s.title}</h3>
+            <p class="text-white/50 text-sm">{s.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center">
+      <a href={RELEASES_URL} class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-violet-900/40">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download for macOS
+      </a>
+      <p class="text-xs text-white/30 mt-3">Requires macOS 12 Monterey or later</p>
+    </div>
+  </div>
+</section>

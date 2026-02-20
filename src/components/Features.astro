@@ -1,0 +1,28 @@
+---
+const features = [
+  { icon: '📸', name: 'Smart Screenshot', description: 'Select any screen region — AI-numbered UI elements copied straight to clipboard.' },
+  { icon: '✨', name: 'Prompt Optimizer', description: 'Turn rough thoughts into structured, context-aware prompts via Groq in under 200ms.' },
+  { icon: '🎙', name: 'Voice Input', description: 'Speak your prompt — transcribed via Whisper and ready to paste into any AI tool.' },
+  { icon: '🤖', name: 'Agent Monitor', description: 'See all running AI agents (Claude Code, Cursor, Aider) with live CPU and token metrics.' },
+  { icon: '🖥', name: 'Preview Window', description: 'Float a live preview with CSS injection for instant visual iteration.' },
+  { icon: '📐', name: 'Workspace Snapshots', description: 'Save your entire window layout and restore it in one click.' },
+];
+---
+
+<section id="features" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything you need, floating above</h2>
+      <p class="text-white/50 text-lg max-w-xl mx-auto">10 features purpose-built for developers who live inside AI coding tools.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {features.map((f) => (
+        <div class="glass p-6 flex flex-col gap-3 hover:border-violet-500/30 transition-colors" style="border-radius:1rem">
+          <span class="text-3xl">{f.icon}</span>
+          <h3 class="font-semibold text-white text-base">{f.name}</h3>
+          <p class="text-white/50 text-sm leading-relaxed">{f.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
