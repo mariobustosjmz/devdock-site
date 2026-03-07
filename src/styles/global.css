@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,23 +9,35 @@ html {
 }
 
 body {
-  background: #0a0a0f;
-  color: white;
-  font-family: system-ui, -apple-system, sans-serif;
+  background: #faf9f7;
+  color: #1a1a1a;
+  font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1rem;
+::selection {
+  background: #e8572030;
+  color: #1a1a1a;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.mono {
+  font-family: 'DM Mono', 'SF Mono', monospace;
+}
+
+.accent { color: #e85720; }
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e85720;
+}
+
+.divider {
+  height: 1px;
+  background: #e8e6e1;
+  margin: 0 auto;
 }

@@ -1,23 +1,43 @@
 ---
 import { skills } from '../lib/skills';
 
-const features = skills;
+const features = skills.filter(s => s.category === 'devdock');
 ---
 
-<section id="features" class="py-24 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything you need, floating above</h2>
-      <p class="text-white/50 text-lg max-w-xl mx-auto">10 features purpose-built for developers who live inside AI coding tools.</p>
+<section id="features" class="px-6 sm:px-12 lg:px-24 py-24">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16 max-w-lg">
+      <p class="section-label mb-4">02 &mdash; Features</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Six tools,<br/>one floating dock.</h2>
+      <p class="text-[#6b6560] text-base leading-relaxed">Purpose-built for developers who live inside AI coding tools.</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {features.map((f) => (
-        <div class="glass p-6 flex flex-col gap-3 hover:border-violet-500/30 transition-colors">
-          <span class="text-3xl">{f.icon}</span>
-          <h3 class="font-semibold text-white text-base">{f.name}</h3>
-          <p class="text-white/50 text-sm leading-relaxed">{f.description}</p>
+
+    <!-- Featured skill - large -->
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
+      <div class="lg:col-span-3 bg-[#f0eee9] border border-[#e8e6e1] rounded-2xl p-8 sm:p-10">
+        <p class="text-sm text-[#e85720] font-medium mb-3">{features[0].name}</p>
+        <p class="text-2xl sm:text-3xl font-bold tracking-tight mb-4 leading-tight">Select any region.<br/>AI numbers every element.</p>
+        <p class="text-[#6b6560] text-sm leading-relaxed max-w-sm">{features[0].description}</p>
+      </div>
+      <div class="lg:col-span-2 bg-[#1a1a1a] text-[#faf9f7] border border-[#333] rounded-2xl p-8 sm:p-10 flex flex-col justify-between">
+        <div>
+          <p class="text-sm text-[#e85720] font-medium mb-3">{features[1].name}</p>
+          <p class="text-xl font-bold tracking-tight mb-4 leading-tight">Structured prompts<br/>in under 200ms.</p>
+        </div>
+        <p class="text-[#999] text-sm leading-relaxed">{features[1].description}</p>
+      </div>
+    </div>
+
+    <!-- Remaining skills - smaller grid, varied -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {features.slice(2).map((f) => (
+        <div class="border border-[#e8e6e1] rounded-2xl p-6 hover:border-[#e85720]/30 transition-colors">
+          <p class="text-sm text-[#e85720] font-medium mb-2">{f.name}</p>
+          <p class="text-[#6b6560] text-sm leading-relaxed">{f.description}</p>
         </div>
       ))}
     </div>
   </div>
 </section>
+
+<div class="divider max-w-6xl"></div>
