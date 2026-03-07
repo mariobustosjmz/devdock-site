@@ -1,12 +1,7 @@
 ---
-const features = [
-  { icon: '📸', name: 'Smart Screenshot', description: 'Select any screen region — AI-numbered UI elements copied straight to clipboard.' },
-  { icon: '✨', name: 'Prompt Optimizer', description: 'Turn rough thoughts into structured, context-aware prompts via Groq in under 200ms.' },
-  { icon: '🎙', name: 'Voice Input', description: 'Speak your prompt — transcribed via Whisper and ready to paste into any AI tool.' },
-  { icon: '🤖', name: 'Agent Monitor', description: 'See all running AI agents (Claude Code, Cursor, Aider) with live CPU and token metrics.' },
-  { icon: '🖥', name: 'Preview Window', description: 'Float a live preview with CSS injection for instant visual iteration.' },
-  { icon: '📐', name: 'Workspace Snapshots', description: 'Save your entire window layout and restore it in one click.' },
-];
+import { skills } from '../lib/skills';
+
+const features = skills;
 ---
 
 <section id="features" class="py-24 px-6">
